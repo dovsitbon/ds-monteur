@@ -1,0 +1,29 @@
+# DS Monteur
+
+> DS Monteur conçoit et développe des sites vitrines sur mesure pour commerçants, restaurants, artisans et PME. Intervention sur place en Île-de-France, Hauts-de-France et Normandie, et à distance partout en France. Tarifs sur devis uniquement, sans abonnement caché. Contact : 07 66 33 84 72 (téléphone et WhatsApp).
+
+## Services
+- Sites vitrines sur mesure, adaptés au mobile et à la tablette
+- Sites pour restaurants et métiers de bouche : menu consultable, réservation, mise en valeur de la carte et de la terrasse
+- Sites pour artisans et services : prestations, demande de devis en ligne, zone d'intervention
+- Référencement local : fiche Google Maps, données structurées, liens Instagram et Facebook
+
+## Engagements
+- Livraison rapide, délai fixé dans le devis
+- Zéro abonnement masqué
+- Accompagnement de A à Z avec un seul interlocuteur
+
+## Réalisations
+- [Le Riad, restaurant marocain à Herblay-sur-Seine](https://le-riad-herblay.vercel.app/)
+- [Au Bon Fournil, boulangerie à Montmagny](https://au-bon-fournil.vercel.app/)
+- [Aux Plaisirs d'Enghien, restaurant chinois et vietnamien à Enghien-les-Bains](https://aux-plaisirs-enghien.vercel.app/)
+- [Institut Lydie, beauté et bien-être à Enghien-les-Bains](https://institut-lydie.vercel.app/)
+- [Les Mouettes, paillote et brasserie à Mers-les-Bains](https://resto-les-mouette.vercel.app/)
+- [Joseph Cusol, couture et retouches à Enghien-les-Bains](https://joseph-cusol.vercel.app/)
+- [Sergioh!, restaurant français et tunisien à Sarcelles](https://sergio-plum.vercel.app/)
+- [The Kosher Paris, visites et services VIP à Paris, site en 3 langues](https://the-kosher-paris.vercel.app/)
+
+## Pages
+- [Accueil](https://ds-monteur.vercel.app/)
+- [Questions fréquentes](https://ds-monteur.vercel.app/#questions)
+- [Contact](https://ds-monteur.vercel.app/#contact)

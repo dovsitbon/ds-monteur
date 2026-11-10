@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@source "../index.html";
+
+@theme {
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-bg: #0d0c0a;
+  --color-surface: #151411;
+  --color-raised: #1c1a17;
+  --color-line: rgb(237 233 224 / 0.1);
+  --color-line-strong: rgb(237 233 224 / 0.18);
+  --color-ink: #ede9e0;
+  --color-muted: #a39e93;
+  --color-accent: #d9ae5f;
+  --color-accent-strong: #e8c27a;
+  --color-on-accent: #17130b;
+  --color-whatsapp: #1fa855;
+
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: rgb(217 174 95 / 0.35); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
+
+@layer components {
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+    min-height: 3.25rem; padding: 0 1.5rem; border-radius: 6px;
+    font-weight: 500; font-size: 1rem; cursor: pointer; white-space: nowrap;
+    transition-property: background-color, border-color, color, transform;
+    transition-duration: .2s;
+    transition-timing-function: var(--ease-out-soft);
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn-primary { background: var(--color-ink); color: var(--color-bg); }
+  .btn-primary:hover { background: #fff; }
+  .btn-ghost { border: 1px solid var(--color-line-strong); color: var(--color-ink); }
+  .btn-ghost:hover { border-color: rgb(237 233 224 / 0.4); background: rgb(237 233 224 / 0.04); }
+
+  .card { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 12px; }
+
+  .field {
+    width: 100%; min-height: 3.25rem; padding: 0.8rem 1rem; font-size: 1rem;
+    background: var(--color-bg); color: var(--color-ink);
+    border: 1px solid var(--color-line-strong); border-radius: 8px;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .field::placeholder { color: rgb(163 158 147 / 0.7); }
+  .field:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgb(217 174 95 / 0.18); }
+  .field[aria-invalid="true"] { border-color: #e5806f; }
+  select.field {
+    appearance: none; padding-right: 2.75rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%23a39e93' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 1rem center;
+  }
+  select.field option { background: var(--color-surface); }
+
+  .shot { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; width: 100%; height: auto; display: block; }
+
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s var(--ease-out-soft), transform .6s var(--ease-out-soft); transition-delay: calc(var(--i, 0) * 80ms); }
+  .reveal.is-in { opacity: 1; transform: none; }
+}
+@media (max-width: 639px) {
+  html { scroll-padding-bottom: 6rem; }
+}
+@media (max-width: 379px) {
+  .btn { white-space: normal; text-align: center; padding-block: 0.75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
